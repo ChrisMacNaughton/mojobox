@@ -1,10 +1,11 @@
 #!/bin/bash
 
 set -e
-HOME=/home/ubuntu
 
-sudo add-apt-repository -y ppa:mojo-maintainers/ppa
-sudo apt-get update -qqy
-sudo apt-get install -qy mojo
-sudo usermod -a -G mojo ubuntu
+OS_ENV=$1
+if [[ -z $OS_ENV ]]; then
+    echo "No Environment specified, assuming trusty"
+    OS_ENV=trusty
+fi
 
+mojo --break_everything project-new  --series $OS_ENV -c containerless openstack
