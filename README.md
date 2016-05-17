@@ -1,6 +1,6 @@
 # Mojobox
 
-Mojobox is an extension of [charmbox](https://github.com/juju-solutions/charmbox) which adds tools for developing with [Mojo](https://mojo.canonical.com).
+[Mojobox](https://hub.docker.com/r/iceyec/mojobox/) is an extension of [charmbox](https://github.com/juju-solutions/charmbox) which adds tools for developing with [Mojo](https://mojo.canonical.com).
 
 ## Getting Started
 
