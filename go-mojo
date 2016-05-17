@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [[ -z $1 ]]; then
+    echo "Please specify a spec"
+    exit 1
+fi
+
+spec_root="/home/ubuntu/mojo"
+spec=$1
+workspace_name="${spec_name}_$(date +'%Y%M%d_%H%M%S')"
+mojo run --project openstack --series trusty --stage $spec $spec_root $workspace_name
